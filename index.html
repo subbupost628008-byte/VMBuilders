@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VM Builders | Quality Construction You Can Trust</title>
+  <meta name="description" content="Trusted construction services: residential, commercial, renovations, interiors. Get a fast, free quote and see our completed projects." />
+  <meta name="keywords" content="construction, builder, contractor, house construction, renovation, interiors, commercial" />
+  <link rel="canonical" href="https://example.com/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="VM Builders" />
+  <meta property="og:description" content="Quality Construction You Can Trust. Get a free quote today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?q=80&w=1200&auto=format&fit=crop" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23222'/><path d='M15 70 L50 30 L85 70' stroke='%23f5c518' stroke-width='10' fill='none'/></svg>">
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --card:#111827; /* gray-900 */
+      --muted:#94a3b8; /* slate-400 */
+      --text:#e5e7eb; /* gray-200 */
+      --brand:#f5c518; /* construction yellow */
+      --brand-dark:#d4a90e;
+      --accent:#22c55e; /* green for success */
+      --danger:#ef4444;
+      --maxw:1100px;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#0b1023 0%, var(--bg) 100%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.7);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .logo__mark{width:36px;height:36px;border-radius:10px;background:radial-gradient(circle at 30% 30%, #fff3, transparent 40%), #222;border:1px solid #fff2;display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo__mark svg{width:24px;height:24px}
+    .nav__links{display:flex;gap:18px;align-items:center}
+    .nav a.btn{padding:10px 16px;border-radius:999px;background:var(--brand);color:#111;font-weight:700;border:0;box-shadow:0 6px 18px rgba(245,197,24,.25)}
+    .nav a.btn:hover{background:var(--brand-dark)}
+    .nav__link{opacity:.9}
+    .nav__link:hover{opacity:1}
+
+    /* HERO */
+    .hero{position:relative;isolation:isolate}
+    .hero__wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:48px 0}
+    .headline{font-size:clamp(28px,4vw,48px);line-height:1.15;margin:0 0 12px;font-weight:900}
+    .sub{color:var(--muted);font-size:clamp(14px,2.2vw,18px)}
+    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid #ffffff22;background:#ffffff10;color:#fff;font-weight:700}
+    .btn--primary{background:var(--brand);color:#111;border-color:transparent}
+    .btn--primary:hover{background:var(--brand-dark)}
+    .btn--ghost:hover{background:#ffffff18}
+    .hero__img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .hero__img img{aspect-ratio:16/11;object-fit:cover}
+    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:var(--muted);font-size:14px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#ffffff10;border:1px solid #ffffff14;padding:8px 12px;border-radius:999px}
+
+    /* SECTIONS */
+    section{padding:64px 0;border-top:1px solid rgba(255,255,255,.06)}
+    h2{font-size:clamp(22px,3vw,34px);margin:0 0 22px}
+    p.lead{color:var(--muted);margin-top:-6px}
+
+    /* SERVICES */
+    .grid{display:grid;gap:18px}
+    .grid--3{grid-template-columns:repeat(3,1fr)}
+    .grid--2{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--card);border:1px solid #ffffff10;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:transform .25s}
+    .card:hover{transform:translateY(-2px)}
+    .icon{width:42px;height:42px;border-radius:12px;background:#fff1;display:grid;place-items:center;margin-bottom:8px}
+
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .stat{background:#ffffff0d;border:1px solid #ffffff14;border-radius:14px;padding:16px;text-align:center}
+    .stat b{display:block;font-size:28px}
+
+    /* PORTFOLIO */
+    .portfolio img{border-radius:14px;border:1px solid #ffffff14;box-shadow:var(--shadow)}
+
+    /* TESTIMONIALS */
+    .testis{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 9px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+    .testi{scroll-snap-align:start}
+    blockquote{margin:0;color:#d1d5db}
+
+    /* CONTACT */
+    form{display:grid;gap:12px}
+    label{font-size:14px;color:var(--muted)}
+    input, textarea, select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #ffffff22;background:#0b1228;color:#e5e7eb}
+    textarea{min-height:110px;resize:vertical}
+    .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    .helper{font-size:12px;color:var(--muted)}
+    .toast{position:fixed;right:20px;bottom:20px;background:#111827;border:1px solid #ffffff22;color:#e5e7eb;padding:12px 14px;border-radius:999px;box-shadow:var(--shadow);transform:translateY(20px);opacity:0;pointer-events:none;transition:all .3s}
+    .toast.show{opacity:1;transform:none}
+
+    /* FOOTER */
+    footer{padding:28px 0;color:#9ca3af}
+
+    /* FLOAT WHATSAPP */
+    .whatsapp{position:fixed;right:18px;bottom:18px;z-index:60}
+    .whatsapp a{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;background:#25D366;color:#111;font-weight:800;box-shadow:0 12px 24px rgba(37,211,102,.35)}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(8px);transition:all .6s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width: 900px){
+      .hero__wrap{grid-template-columns:1fr}
+      .grid--3{grid-template-columns:1fr}
+      .grid--2{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .testis{grid-auto-columns:85%}
+      .row{grid-template-columns:1fr}
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal{transition:none}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "VM Builders",
+    "description": "Residential & commercial construction, renovations, interiors.",
+    "telephone": "+91-90000-00000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Builders Street",
+      "addressLocality": "Madurai",
+      "addressRegion": "TN",
+      "postalCode": "625001",
+      "addressCountry": "IN"
+    },
+    "url": "https://example.com",
+    "areaServed": "Madurai, Dindigul, Sivaganga",
+    "image": "https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?q=80&w=1200&auto=format&fit=crop",
+    "openingHours": "Mo-Sa 09:00-18:00"
+  }
+  </script>
+</head>
+<body>
+  <!-- Floating WhatsApp (edit the phone number) -->
+  <div class="whatsapp">
+    <a id="waButton" href="https://wa.me/919000000000" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+  </div>
+
+  <nav class="nav" aria-label="Main Navigation">
+    <div class="container nav__inner">
+      <a href="#home" class="logo">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 18L12 6l9 12" stroke="#f5c518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>VM Builders</span>
+      </a>
+      <div class="nav__links">
+        <a class="nav__link" href="#services">Services</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#testimonials">Testimonials</a>
+        <a class="nav__link" href="#contact">Contact</a>
+        <a class="btn" href="tel:+919000000000">📞 Call Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="container hero__wrap">
+      <div>
+        <h1 class="headline reveal">Quality Construction You Can Trust</h1>
+        <p class="sub reveal" style="transition-delay:.05s">We build residential & commercial projects with punctual delivery, transparent pricing, and lifetime-quality workmanship.</p>
+        <div class="cta reveal" style="transition-delay:.1s">
+          <a href="#contact" class="btn btn--primary">Get a Free Quote</a>
+          <a href="#projects" class="btn btn--ghost">See Our Work</a>
+        </div>
+        <div class="trust reveal" style="transition-delay:.15s">
+          <span class="badge">🏗️ 15+ years experience</span>
+          <span class="badge">⭐ 4.9/5 client rating</span>
+          <span class="badge">🧱 200+ projects delivered</span>
+        </div>
+      </div>
+      <div class="hero__img reveal" style="transition-delay:.05s">
+        <img src="https://images.unsplash.com/photo-1581093458791-9d09a9400dfd?q=80&w=1600&auto=format&fit=crop" alt="Construction team at work on site" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="container">
+      <h2 class="reveal">Our Services</h2>
+      <p class="lead reveal">From foundation to finishing, we handle end-to-end execution.</p>
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <div class="icon">🏠</div>
+          <h3>Residential Construction</h3>
+          <p>Independent houses, villas, and apartments with robust structure and elegant finishes.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.05s">
+          <div class="icon">🏢</div>
+          <h3>Commercial Projects</h3>
+          <p>Shops, offices, and industrial sheds with on-time delivery and safety compliance.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.1s">
+          <div class="icon">🔧</div>
+          <h3>Renovation & Remodeling</h3>
+          <p>Smart upgrades, structural repairs, and interiors to refresh your property.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🧭</div>
+          <h3>Design & Planning</h3>
+          <p>Architectural plans, 3D elevations, approvals, and project budgeting.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.05s">
+          <div class="icon">🪵</div>
+          <h3>Interiors</h3>
+          <p>Modular kitchens, wardrobes, ceiling, lighting and turnkey interior fit-outs.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.1s">
+          <div class="icon">🌿</div>
+          <h3>Landscape & Pavers</h3>
+          <p>Garden layouts, pathways, compound walls and exterior works.</p>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+      <div class="stats">
+        <div class="stat reveal"><b>15+</b>Years in Business</div>
+        <div class="stat reveal" style="transition-delay:.05s"><b>200+</b>Projects Completed</div>
+        <div class="stat reveal" style="transition-delay:.1s"><b>30+</b>Skilled Staff</div>
+        <div class="stat reveal" style="transition-delay:.15s"><b>100%</b>On-time Delivery</div>
+      </div>
+    </section>
+
+    <section id="projects" class="container portfolio">
+      <h2 class="reveal">Featured Projects</h2>
+      <p class="lead reveal">A glimpse of our recent residential and commercial work.</p>
+      <div class="grid grid--3">
+        <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-07-28+at+6.34.03+PM.jpeg?q=80&w=1200&auto=format&fit=crop" alt="Modern house exterior" loading="lazy" />
+        <img class="reveal" style="transition-delay:.05s" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop" alt="Office building lobby" loading="lazy" />
+        <img class="reveal" style="transition-delay:.1s" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Construction site with crane" loading="lazy" />
+        <img class="reveal" src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" alt="Interior living room" loading="lazy" />
+        <img class="reveal" style="transition-delay:.05s" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Commercial exterior" loading="lazy" />
+        <img class="reveal" style="transition-delay:.1s" src="https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1200&auto=format&fit=crop" alt="Kitchen interior" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="why" class="container">
+      <h2 class="reveal">Why Choose Us</h2>
+      <div class="grid grid--2">
+        <div class="card reveal">
+          <h3>Transparent Pricing</h3>
+          <p>No hidden charges. Detailed BOQ and stage-wise payments.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.05s">
+          <h3>Punctual Delivery</h3>
+          <p>Committed timelines and daily site supervision.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Quality Materials</h3>
+          <p>We source ISI-certified materials and follow best practices.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.05s">
+          <h3>After-Support</h3>
+          <p>Post-handover support and maintenance packages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="container">
+      <h2 class="reveal">Happy Clients</h2>
+      <div class="testis">
+        <div class="card testi">
+          <blockquote>“They finished our home on time with great quality. Highly recommended!”</blockquote>
+          <div class="helper">— Prakash, Madurai</div>
+        </div>
+        <div class="card testi">
+          <blockquote>“Professional team, clear communication and neat work throughout our office project.”</blockquote>
+          <div class="helper">— Deepa, Dindigul</div>
+        </div>
+        <div class="card testi">
+          <blockquote>“Transparent pricing and attention to detail. We loved the interiors.”</blockquote>
+          <div class="helper">— Rahman, Sivaganga</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2 class="reveal">Get a Free Quote</h2>
+      <p class="lead reveal">Fill the form and we’ll respond within 1 business day. Or call <a href="tel:+919000000000">+91 90000 00000</a>.</p>
+      <div class="grid grid--2">
+        <div class="card reveal">
+          <form id="quoteForm" novalidate>
+            <div class="row">
+              <div>
+                <label for="name">Your Name</label>
+                <input id="name" name="name" required placeholder="Full name" />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" inputmode="numeric" required placeholder="10-digit mobile" pattern="[0-9]{10}" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="city">City</label>
+                <input id="city" name="city" placeholder="e.g., Madurai" />
+              </div>
+              <div>
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                  <option>Residential Construction</option>
+                  <option>Commercial Project</option>
+                  <option>Renovation / Remodeling</option>
+                  <option>Interiors</option>
+                  <option>Design & Planning</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="message">Your Requirements</label>
+              <textarea id="message" name="message" placeholder="Plot size, location, timeline, budget…"></textarea>
+            </div>
+            <div class="helper">By submitting, we’ll contact you for the quote. No spam.</div>
+            <button class="btn btn--primary" type="submit">Submit & WhatsApp</button>
+            <button class="btn btn--ghost" type="button" id="emailBtn">Email Instead</button>
+          </form>
+        </div>
+        <div class="card reveal" style="min-height:100%">
+          <h3>Visit Our Office</h3>
+          <p>123 Builders Street, Madurai, TN 625001</p>
+          <iframe title="Office Location Map" src="https://www.google.com/maps?q=Madurai&output=embed" width="100%" height="280" style="border:0;border-radius:12px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div style="height:8px"></div>
+          <a class="btn" href="https://maps.google.com/?q=123 Builders Street, Madurai" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Suburaj Constructions • GST: 33ABCDE1234F1Z5 • All rights reserved.
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Thanks! We’ll contact you shortly.</div>
+
+  <script>
+    // ===== Utility =====
+    const $ = (sel, el=document) => el.querySelector(sel);
+
+    // ===== Year =====
+    $('#year').textContent = new Date().getFullYear();
+
+    // ===== Reveal on scroll =====
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      })
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // ===== Form handling =====
+    const WHATSAPP_NUMBER = '919000000000'; // <- EDIT THIS (countrycode + number, no + sign)
+
+    function showToast(msg){
+      const t = $('#toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(()=>t.classList.remove('show'), 2600);
+    }
+
+    function encode(obj){
+      return Object.entries(obj).map(([k,v])=> `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&');
+    }
+
+    $('#quoteForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      // Basic validation
+      if(!data.name || !data.phone || !/^\d{10}$/.test(data.phone)){
+        showToast('Please fill name and a 10-digit phone.');
+        return;
+      }
+      const text = `New Quote Request:%0AName: ${data.name}%0APhone: ${data.phone}%0ACity: ${data.city||''}%0AService: ${data.service||''}%0AMessage: ${data.message||''}`;
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+      window.open(waUrl, '_blank');
+      showToast('Opening WhatsApp…');
+      e.target.reset();
+    });
+
+    $('#emailBtn').addEventListener('click', ()=>{
+      const form = $('#quoteForm');
+      const data = Object.fromEntries(new FormData(form).entries());
+      const subject = 'New Quote Request from Website';
+      const body = `Name: ${data.name||''}%0APhone: ${data.phone||''}%0ACity: ${data.city||''}%0AService: ${data.service||''}%0ARequirements: ${data.message||''}`;
+      // EDIT your email below
+      const mail = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+      window.location.href = mail;
+      showToast('Preparing email…');
+    });
+
+    // Ensure WA floating button points to the same number
+    (function syncWA(){
+      const btn = $('#waButton');
+      btn.href = `https://wa.me/${WHATSAPP_NUMBER}`;
+    })();
+  </script>
+</body>
+</html>
