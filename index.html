@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VM Builders | Quality Construction You Can Trust</title>
-  <meta name="description" content="Trusted construction services: residential, commercial, renovations, interiors. Get a fast, free quote and see our completed projects." />
-  <meta name="keywords" content="construction, builder, contractor, house construction, renovation, interiors, commercial" />
-  <link rel="canonical" href="https://example.com/" />
+  <!-- SEO Title -->
+  <title>VM Builders | Construction Services in Thoothukudi</title>
+  
+  <!-- SEO Description -->
+  <meta name="description" content="VM Builders offers trusted residential, commercial, and renovation services in Madurai & Thoothukudi. Quality construction you can trust.">
+
+   <!-- Keywords for Search Engines -->
+  <meta name="keywords" content="VM Builders, Construction, Madurai, Thoothukudi, Residential, Commercial, Renovation, Interior Design">
+
+  <link rel="canonical" href="https://subbupost628008-byte.github.io/VMBuilders/" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="VM Builders" />
-  <meta property="og:description" content="Quality Construction You Can Trust. Get a free quote today." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?q=80&w=1200&auto=format&fit=crop" />
+    <!-- Open Graph for Social Media Sharing -->
+  <meta property="og:title" content="VM Builders | Quality Construction in Tamil Nadu">
+  <meta property="og:description" content="Trusted construction services in Thoothukudi. Residential, commercial, renovations, interiors. Get a fast, free quote today!">
+  <meta property="og:image" content="https://subbupost628008-byte.github.io/VMBuilders/images/banner.jpg">
+  <meta property="og:url" content="https://subbupost628008-byte.github.io/VMBuilders/">
+  <meta property="og:type" content="website">
+  
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23222'/><path d='M15 70 L50 30 L85 70' stroke='%23f5c518' stroke-width='10' fill='none'/></svg>">
   <style>
     :root{
@@ -83,8 +92,24 @@
     .portfolio img{border-radius:14px;border:1px solid #ffffff14;box-shadow:var(--shadow)}
 
     /* TESTIMONIALS */
-    .testis{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 9px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
-    .testi{scroll-snap-align:start}
+    /* .testis{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 9px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+    .testi{scroll-snap-align:start} */
+    .testis {
+  display: flex; /* horizontal layout */
+  gap: 12px; /* smaller gap for compactness */
+  overflow-x: auto; /* enable horizontal scroll */
+  scroll-snap-type: x mandatory; /* smooth snapping */
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.testi {
+  flex: 0 0 60%; /* narrower cards for compact view */
+  scroll-snap-align: start;
+  min-width: 220px; /* ensures cards don’t shrink too much */
+  padding: 12px;
+  box-sizing: border-box;
+}
     blockquote{margin:0;color:#d1d5db}
 
     /* CONTACT */
@@ -142,14 +167,14 @@
     "telephone": "+919843503169",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Builders Street",
-      "addressLocality": "Madurai",
+      "streetAddress": "3-86,WestStreet, A.Kumareddiyapuram",
+      "addressLocality": "Thoothukudi",
       "addressRegion": "TN",
-      "postalCode": "625001",
+      "postalCode": "628002",
       "addressCountry": "IN"
     },
     "url": "https://example.com",
-    "areaServed": "Madurai, Dindigul, Sivaganga",
+    "areaServed": "Thoothukudi, Vilathikulam, Thiruchendur, Tirunelveli, Kovilpatti, Ramanathapuram",
     "image": "https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?q=80&w=1200&auto=format&fit=crop",
     "openingHours": "Mo-Sa 09:00-18:00"
   }
@@ -164,13 +189,14 @@
   <nav class="nav" aria-label="Main Navigation">
     <div class="container nav__inner">
       <a href="#home" class="logo">
-        <span class="logo__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 18L12 6l9 12" stroke="#f5c518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <span class="logo__mark" aria-hidden="true" style="width:60px; height:60px; display:grid; place-items:center;">
+          <img src="https://vmbuilders.s3.ap-south-1.amazonaws.com/ChatGPT+Image+Aug+16%2C+2025%2C+01_35_54+AM.png" 
+               alt="VM Builders Logo" 
+               style="width:100%; height:100%; border-radius:12px; object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,.35);" />
         </span>
-        <span>VM Builders</span>
+        <span style="font-size:1.5rem; font-weight:900; margin-left:10px;">VM Builders</span>
       </a>
+      
       <div class="nav__links">
         <a class="nav__link" href="#services">Services</a>
         <a class="nav__link" href="#projects">Projects</a>
@@ -191,9 +217,9 @@
           <a href="#projects" class="btn btn--ghost">See Our Work</a>
         </div>
         <div class="trust reveal" style="transition-delay:.15s">
-          <span class="badge">🏗️ 15+ years experience</span>
+          <span class="badge">🏗️ 20+ years experience</span>
           <span class="badge">⭐ 4.9/5 client rating</span>
-          <span class="badge">🧱 200+ projects delivered</span>
+          <span class="badge">🧱 100+ projects delivered</span>
         </div>
       </div>
       <div class="hero__img reveal" style="transition-delay:.05s">
@@ -241,8 +267,8 @@
 
       <div style="height:18px"></div>
       <div class="stats">
-        <div class="stat reveal"><b>15+</b>Years in Business</div>
-        <div class="stat reveal" style="transition-delay:.05s"><b>200+</b>Projects Completed</div>
+        <div class="stat reveal"><b>20</b>Years in Business</div>
+        <div class="stat reveal" style="transition-delay:.05s"><b>100+</b>Projects Completed</div>
         <div class="stat reveal" style="transition-delay:.1s"><b>30+</b>Skilled Staff</div>
         <div class="stat reveal" style="transition-delay:.15s"><b>100%</b>On-time Delivery</div>
       </div>
@@ -252,12 +278,17 @@
   <h2 class="reveal">Featured Projects</h2>
   <p class="lead reveal">A glimpse of our recent residential and commercial work.</p>
   <div class="grid grid--3 uniform-grid">
-    <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.11.01+AM.jpeg" alt="Modern house exterior" loading="lazy" />
-    <img class="reveal" style="transition-delay:.05s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-14+at+5.29.52+PM.jpeg" alt="Office building lobby" loading="lazy" />
-    <img class="reveal" style="transition-delay:.1s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.03.22+AM.jpeg" alt="Construction site with crane" loading="lazy" />
-    <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.03.59+AM.jpeg" alt="Interior living room" loading="lazy" />
-    <img class="reveal" style="transition-delay:.05s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.01.07+AM.jpeg" alt="Commercial exterior" loading="lazy" />
-    <img class="reveal" style="transition-delay:.1s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.01.08+AM.jpeg" alt="Kitchen interior" loading="lazy" />
+    <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.11.01+AM.jpeg" alt="Residential building project in Thiruchendur by VM Builders" loading="lazy" />
+    <img class="reveal" style="transition-delay:.05s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-14+at+5.29.52+PM.jpeg" alt="Residential building project in Thoothukudi by VM Builders" loading="lazy" />
+    <img class="reveal" style="transition-delay:.1s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.53.25+AM.jpeg" alt="Residential building project in Ramanathapuram by VM Builders" loading="lazy" />
+   
+    <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.55.40+AM.jpeg" alt="Residential building project in Vilathikulam by VM Builders" loading="lazy" />
+    <img class="reveal" style="transition-delay:.05s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.01.07+AM.jpeg" alt="Residential building project in Thoothukudi by VM Builders" loading="lazy" />
+    <img class="reveal" style="transition-delay:.1s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.03.22+AM.jpeg" alt="Residential building project in Vilathikulam by VM Builders" loading="lazy" />
+   
+    <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/laxmi-warehouses-2.jpg" alt="Residential building project in Madurai by VM Builders" loading="lazy" />
+    <img class="reveal" style="transition-delay:.05s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.56.58+AM.jpeg" alt="Residential building project in Madurai by VM Builders" loading="lazy" />
+    <img class="reveal" style="transition-delay:.1s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.01.08+AM.jpeg" alt="Residential building project in Madurai by VM Builders" loading="lazy" />
   </div>
 </section>
 
@@ -288,15 +319,15 @@
       <div class="testis">
         <div class="card testi">
           <blockquote>“They finished our home on time with great quality. Highly recommended!”</blockquote>
-          <div class="helper">— Prakash, Madurai</div>
+          <div class="helper">— Alaghulakshmi, Thoothukudi</div>
         </div>
         <div class="card testi">
           <blockquote>“Professional team, clear communication and neat work throughout our office project.”</blockquote>
-          <div class="helper">— Deepa, Dindigul</div>
+          <div class="helper">— BalaSubramanian, Vilathikulam</div>
         </div>
         <div class="card testi">
           <blockquote>“Transparent pricing and attention to detail. We loved the interiors.”</blockquote>
-          <div class="helper">— Rahman, Sivaganga</div>
+          <div class="helper">— Ramesh, Kovilpatti</div>
         </div>
       </div>
     </section>
@@ -355,12 +386,12 @@
   referrerpolicy="no-referrer-when-downgrade">
 </iframe>
           <div style="height:8px"></div>
-<!--           <a class="btn" 
+          <a class="btn" 
    href="https://www.google.com/maps/place/A.Kumareddiyapuram,+Thoothukudi,+Tamil+Nadu+628002/@8.833480191447057,78.06243707501307,17z" 
    target="_blank" 
    rel="noopener">
    📍 Open in Google Maps
-</a> -->
+</a>
         </div>
       </div>
     </section>
@@ -368,7 +399,7 @@
 
   <footer>
     <div class="container">
-      © <span id="year"></span> Suburaj Constructions • GST: 33ABCDE1234F1Z5 • All rights reserved.
+      © <span id="year"></span> VM Builders • All rights reserved.
     </div>
   </footer>
 
