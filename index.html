@@ -120,6 +120,18 @@
       html{scroll-behavior:auto}
       .reveal{transition:none}
     }
+    .uniform-grid img {
+  width: 100%;
+  height: 300px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures image fills the box without stretching */
+  border-radius: 8px; /* Optional, for rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Optional, adds depth */
+  transition: transform 0.3s ease;
+}
+
+.uniform-grid img:hover {
+  transform: scale(1.03);
+}
   </style>
   <script type="application/ld+json">
   {
@@ -185,7 +197,7 @@
         </div>
       </div>
       <div class="hero__img reveal" style="transition-delay:.05s">
-        <img src="https://images.unsplash.com/photo-1581093458791-9d09a9400dfd?q=80&w=1600&auto=format&fit=crop" alt="Construction team at work on site" />
+        <img src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-07-28+at+6.34.03+PM.jpeg?q=80&w=1600&auto=format&fit=crop" alt="Construction team at work on site" />
       </div>
     </div>
   </header>
@@ -236,18 +248,18 @@
       </div>
     </section>
 
-    <section id="projects" class="container portfolio">
-      <h2 class="reveal">Featured Projects</h2>
-      <p class="lead reveal">A glimpse of our recent residential and commercial work.</p>
-      <div class="grid grid--3">
-        <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-07-28+at+6.34.03+PM.jpeg?q=80&w=1200&auto=format&fit=crop" alt="Modern house exterior" loading="lazy" />
-        <img class="reveal" style="transition-delay:.05s" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop" alt="Office building lobby" loading="lazy" />
-        <img class="reveal" style="transition-delay:.1s" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Construction site with crane" loading="lazy" />
-        <img class="reveal" src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" alt="Interior living room" loading="lazy" />
-        <img class="reveal" style="transition-delay:.05s" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Commercial exterior" loading="lazy" />
-        <img class="reveal" style="transition-delay:.1s" src="https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1200&auto=format&fit=crop" alt="Kitchen interior" loading="lazy" />
-      </div>
-    </section>
+ <section id="projects" class="container portfolio">
+  <h2 class="reveal">Featured Projects</h2>
+  <p class="lead reveal">A glimpse of our recent residential and commercial work.</p>
+  <div class="grid grid--3 uniform-grid">
+    <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.11.01+AM.jpeg" alt="Modern house exterior" loading="lazy" />
+    <img class="reveal" style="transition-delay:.05s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-14+at+5.29.52+PM.jpeg" alt="Office building lobby" loading="lazy" />
+    <img class="reveal" style="transition-delay:.1s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.03.22+AM.jpeg" alt="Construction site with crane" loading="lazy" />
+    <img class="reveal" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.03.59+AM.jpeg" alt="Interior living room" loading="lazy" />
+    <img class="reveal" style="transition-delay:.05s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.01.07+AM.jpeg" alt="Commercial exterior" loading="lazy" />
+    <img class="reveal" style="transition-delay:.1s" src="https://vmbuilders.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2025-08-16+at+1.01.08+AM.jpeg" alt="Kitchen interior" loading="lazy" />
+  </div>
+</section>
 
     <section id="why" class="container">
       <h2 class="reveal">Why Choose Us</h2>
@@ -291,7 +303,7 @@
 
     <section id="contact" class="container">
       <h2 class="reveal">Get a Free Quote</h2>
-      <p class="lead reveal">Fill the form and we’ll respond within 1 business day. Or call <a href="tel:+919000000000">+91 90000 00000</a>.</p>
+      <p class="lead reveal">Fill the form and we’ll respond within 1 business day. Or call <a href="tel:+919843503169">+91 9843503169</a>.</p>
       <div class="grid grid--2">
         <div class="card reveal">
           <form id="quoteForm" novalidate>
@@ -308,7 +320,7 @@
             <div class="row">
               <div>
                 <label for="city">City</label>
-                <input id="city" name="city" placeholder="e.g., Madurai" />
+                <input id="city" name="city" placeholder="e.g., Thoothukudi" />
               </div>
               <div>
                 <label for="service">Service</label>
@@ -343,7 +355,12 @@
   referrerpolicy="no-referrer-when-downgrade">
 </iframe>
           <div style="height:8px"></div>
-          <a class="btn" href="https://maps.google.com/?q=123 Builders Street, Madurai" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+          <a class="btn" 
+   href="https://www.google.com/maps/place/A.Kumareddiyapuram,+Thoothukudi,+Tamil+Nadu+628002/@8.833480191447057,78.06243707501307,17z" 
+   target="_blank" 
+   rel="noopener">
+   📍 Open in Google Maps
+</a>
         </div>
       </div>
     </section>
